@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EpuDI", "EpuDI\EpuDI.csproj", "{9F13B1A1-A37B-4006-976A-D4238C0ECEAE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EpuDI.Example", "EpuDI.Example\EpuDI.Example.csproj", "{5FAD1E88-6788-4317-BBDE-7E63C9E87894}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F13B1A1-A37B-4006-976A-D4238C0ECEAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F13B1A1-A37B-4006-976A-D4238C0ECEAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F13B1A1-A37B-4006-976A-D4238C0ECEAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F13B1A1-A37B-4006-976A-D4238C0ECEAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FAD1E88-6788-4317-BBDE-7E63C9E87894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FAD1E88-6788-4317-BBDE-7E63C9E87894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FAD1E88-6788-4317-BBDE-7E63C9E87894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FAD1E88-6788-4317-BBDE-7E63C9E87894}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBF5BA7D-CC02-442B-A046-DE35C6C60D93}
+	EndGlobalSection
+EndGlobal
