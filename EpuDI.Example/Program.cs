@@ -1,4 +1,6 @@
-﻿namespace EpuDI.Example
+﻿using System;
+
+namespace EpuDI.Example
 {
     partial class Program
     {

@@ -181,6 +181,7 @@ namespace EpuDI.Generators
                     namespace {{Namespace}};
                     using System;
                     using System.Collections.Generic;
+                    using System.Threading;
 
                     public class CompositionAttribute : global::System.Attribute {}
                     public class FactoriesAttribute : global::System.Attribute {}
