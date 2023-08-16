@@ -6,7 +6,7 @@
     <AssemblyName>EpuDI</AssemblyName>
     <RootNamespace>EpuDI.Generators</RootNamespace>
     <LangVersion>Latest</LangVersion>
-    <VersionPrefix>0.2</VersionPrefix>
+    <VersionPrefix>0.3</VersionPrefix>
     <VersionSuffix></VersionSuffix>
   </PropertyGroup>
 

@@ -180,7 +180,7 @@ namespace EpuDI.Generators
                     #nullable enable
                     namespace {{Namespace}};
                     using System;
-                    using System.Collections;
+                    using System.Collections.Generic;
 
                     public class CompositionAttribute : global::System.Attribute {}
                     public class FactoriesAttribute : global::System.Attribute {}
