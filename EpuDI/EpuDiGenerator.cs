@@ -164,7 +164,7 @@ namespace EpuDI.Generators
 
                 partial class {{typeName}}
                 {
-                {{string.Join("\r\n\r\n", factoryClasses.FirstOrDefault()?.Methods?.Select(m => m.GeneratCode()))}}
+                {{string.Join("\r\n\r\n", factoryClasses.FirstOrDefault()?.Methods?.Select(m => m.GenerateCode()))}}
                 }
                 """
             );
@@ -263,7 +263,7 @@ namespace EpuDI.Generators
 
         public interface IFactoryMethodInfo
         {
-            string GeneratCode();
+            string GenerateCode();
         }
 
         class TransientFactoryMethodInfo : IFactoryMethodInfo
@@ -271,7 +271,7 @@ namespace EpuDI.Generators
             public MethodDeclarationSyntax Declaration { get; set; }
             public TypeInfo TypeInfo { get; set; }
 
-            public string GeneratCode()
+            public string GenerateCode()
             {
                 var name = Declaration.Identifier.Text;
                 var returnType = TypeInfo.Type.ToDisplayString();
@@ -285,7 +285,7 @@ namespace EpuDI.Generators
             public MethodDeclarationSyntax Declaration { get; set; }
             public TypeInfo TypeInfo { get; set; }
 
-            public string GeneratCode()
+            public string GenerateCode()
             {
                 var name = Declaration.Identifier.Text;
                 var returnType = TypeInfo.Type.ToDisplayString();
@@ -293,7 +293,7 @@ namespace EpuDI.Generators
                 return $"""
                     private {returnType}? _{name};
                     private bool _{name}Initialized;
-                    public {returnType} {name} => _{name} ??= EnsureInitialized(ref _{name}, ref _{name}Initialized, () => _factories.{name}(this));
+                    public {returnType} {name} => _{name} ??= EnsureInitialized(ref _{name}, ref _{name}Initialized, () => RegisterDisposable(_factories.{name}(this)));
                 """;
             }
         }
@@ -303,7 +303,7 @@ namespace EpuDI.Generators
             public MethodDeclarationSyntax Declaration { get; set; }
             public TypeInfo TypeInfo { get; set; }
 
-            public string GeneratCode()
+            public string GenerateCode()
             {
                 var name = Declaration.Identifier.Text;
                 var returnType = TypeInfo.Type.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat);
